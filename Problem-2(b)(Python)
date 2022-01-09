@@ -1,0 +1,18 @@
+def insert(an,numm, ele):
+	for i in range (0,numm):
+		if (ele>an[i]):
+			k=numm-1
+			while (k>i):
+				an[k]=an[k-1]
+				k-=1
+			an[i]=ele
+			break
+
+arr = [1,2,81,10,4,3]
+n=len(arr)
+num=3
+ref = arr[:num]
+ref.sort(reverse= True)
+for i in range (num,n):
+	insert(ref,num,arr[i])
+print (ref)
