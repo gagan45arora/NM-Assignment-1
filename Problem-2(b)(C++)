@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+void ins(int ar[],int num, int ele){
+    int i=0;
+    while(i<num){
+        if(ar[i]<ele){
+            for (int j=num-1;j>i;j--){
+                ar[j]=ar[j-1];
+            }
+            ar[i]=ele;
+            break;
+        }
+        i++;
+        
+    }
+}
+
+void max_val(int r[], int size,int n)
+{
+   int res[n];
+   for (int i=0;i<n;i++){
+       res[i]=r[i];
+   }
+   sort(res,res+n,greater<int>());
+   for (int i=n;i<size;i++){
+      ins(res,n,r[i]);
+   }
+   for (int i=0;i<n;i++){
+       cout << res[i] << endl;
+   }
+}
+int main(){
+   int arr[]={1,4,10,9,72,3,76,2,-4};
+   int s = sizeof(arr)/sizeof(arr[0]);
+   max_val(arr,s,4);
+}
