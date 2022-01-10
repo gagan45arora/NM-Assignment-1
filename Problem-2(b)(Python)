@@ -10,7 +10,7 @@ def insert(an,numm, ele):
 
 arr = [1,2,81,10,4,3]
 n=len(arr)
-num=3
+num=int(input())
 ref = arr[:num]
 ref.sort(reverse= True)
 for i in range (num,n):
