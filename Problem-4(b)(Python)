@@ -2,12 +2,15 @@ import time
 
 def fib(num):
 	start_time = time.time()
-	res=[0,1]
+	s1=0
+	s2=1
 	for i in range (2,num):
-		res.append(res[i-1]+res[i-2])
+		ref=s2
+		s2+=s1
+		s1=ref
 	end_time = time.time()
 	print ("time of execution of this function is",(end_time-start_time),"seconds")
-	return res[num-1]
+	return s2
 
-num=int(input())
+num=100000
 print(fib(num))
