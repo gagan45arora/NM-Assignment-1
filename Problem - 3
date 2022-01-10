@@ -1,0 +1,23 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+t = np.linspace(0,2*np.pi,100)
+x = np.cos(t)
+y = np.sin(t)
+
+plt.plot(x, y, label='a')
+plt.legend()
+
+x=np.cos(3*t)
+y=np.sin(2*t)
+
+plt.plot(x, y, label='b')
+plt.legend()
+
+x=abs(np.cos(4*t))*np.cos(t)
+y=abs(np.cos(4*t))*np.sin(t)
+
+plt.plot(x, y, label='c')
+plt.legend()
+
+plt.show()
