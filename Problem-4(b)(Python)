@@ -1,10 +1,8 @@
 import time
 
-def fib(n1,n2,num):
+def fib(num):
 	start_time = time.time()
-	res=[]
-	res.append(n1)
-	res.append(n2)
+	res=[0,1]
 	for i in range (2,num):
 		res.append(res[i-1]+res[i-2])
 	end_time = time.time()
@@ -12,4 +10,4 @@ def fib(n1,n2,num):
 	return res[num-1]
 
 num=int(input())
-print(fib(0,1,num))
+print(fib(num))
