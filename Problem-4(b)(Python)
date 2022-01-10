@@ -13,4 +13,6 @@ def fib(num):
 	return s2
 
 num=100000
-print(fib(num))
+print("Enter the number in Fibonacci series that would you like to print")
+num = int(input())
+print("The ",num,"th"+" number in fibonacci series is ",fib(num))
